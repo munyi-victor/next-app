@@ -23,9 +23,10 @@ const Nav = () => {
           href="/signup"
           className="
           bg-black
-          hover:bg-gray-500
+          hover:bg-gray-800
           text-white
-          text-lg font-bold
+          text-lg 
+          font-bold
           font-satoshi
           px-4
           py-2

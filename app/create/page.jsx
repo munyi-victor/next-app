@@ -1,7 +1,9 @@
 const Create = () => {
   return (
-    <section>
-      Create
+    <section className="create-section">
+      <div>
+        Create post
+      </div>
     </section>
   )
 }

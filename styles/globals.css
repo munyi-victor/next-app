@@ -7,3 +7,52 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+/* Forms */
+
+.form_section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 90px;
+}
+
+.auth_form {
+  width: 30vw;
+  height: 70vh;
+  text-align: left;
+  background-color: #97cdff;
+  padding: 20px 30px;
+  margin-left: 35vw;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth_form h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.auth_form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth_form div label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.auth_form div input {
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+/* Create */
+.create-section {
+  text-align: center;
+  padding-top: 20px;
+}
