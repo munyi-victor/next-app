@@ -36,7 +36,7 @@ const Nav = () => {
         </Link>
 
         <Link
-          href="/signin"
+          href="/login"
           className="
           bg-black 
           hover:bg-gray-500
@@ -47,7 +47,7 @@ const Nav = () => {
           py-2
           rounded-full"
         >
-          Sign in
+          Log in
         </Link>
       </div>
     </nav>

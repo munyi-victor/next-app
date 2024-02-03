@@ -3,37 +3,27 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const Signup = () => {
+const Login = () => {
   const router = useRouter();
 
-  const handleNavigate = () => {
+  const handleSubmit = () => {
     router.push("/");
   }
 
-  const [passwordType, setPasswordType] = useState("password");
-
+  const [passwordType, setPasswordType] = useState("password")
+  
   const showPassword = () => {
     if (passwordType === "password") {
       setPasswordType("text");
     } else {
       setPasswordType("password");
     }
-  };
-  
+  }
+
   return (
     <section className="form_section">
-      <form className="auth_form">
-        <h2>Sign up</h2>
-        <div>
-          <label>First name</label>
-          <input type="text" placeholder="Enter first name" required />
-        </div>
-
-        <div>
-          <label>Last name</label>
-          <input type="text" placeholder="Enter last name" required />
-        </div>
-
+      <form className="auth_form" onSubmit="/">
+        <h2 style={{ marginBottom: 20 }}>Log in</h2>
         <div>
           <label>Email</label>
           <input type="email" placeholder="Enter your email" required />
@@ -47,18 +37,17 @@ const Signup = () => {
             className="show_login_pwd"
             style={{
               right: "38vw",
-              top: "66.4vh",
+              top:"45.6vh"
             }}
-          >
-            {passwordType === "password" ? "Show" : "Hide"}
+          >{passwordType === "password" ? "Show" : "Hide"}
           </span>
         </div>
 
         <div>
           <input
             type="button"
-            value="Sign up"
-            onClick={handleNavigate}
+            value="Log in"
+            onClick={handleSubmit}
             className="
               bg-black 
               hover:bg-gray-800
@@ -73,11 +62,11 @@ const Signup = () => {
         </div>
 
         <span>
-          Already have an account? <a href="/login">Log in</a>
+          Don't have an account? <a href="/signup">Sign up</a>
         </span>
       </form>
     </section>
   );
 }
 
-export default Signup;
+export default Login;

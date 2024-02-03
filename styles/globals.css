@@ -13,12 +13,12 @@
 .form_section {
   height: 100vh;
   width: 100%;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 .auth_form {
   width: 30vw;
-  height: 70vh;
+  height: 75vh;
   text-align: left;
   background-color: #97cdff;
   padding: 20px 30px;
@@ -49,6 +49,21 @@
 .auth_form div input {
   padding: 6px 10px;
   border-radius: 10px;
+}
+
+.auth_form span {
+  font-weight: 600;
+}
+
+.auth_form span a {
+  color: blue;
+}
+
+.auth_form div span{
+  color: blue;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
 }
 
 /* Create */
