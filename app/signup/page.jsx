@@ -10,6 +10,11 @@ const Signup = () => {
     router.push("/");
   }
 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const [passwordType, setPasswordType] = useState("password");
 
   const showPassword = () => {
@@ -26,22 +31,42 @@ const Signup = () => {
         <h2>Sign up</h2>
         <div>
           <label>First name</label>
-          <input type="text" placeholder="Enter first name" required />
+          <input
+            type="text"
+            placeholder="Enter first name"
+            required
+            onChange={(firstName) => setFirstName(firstName)}
+          />
         </div>
 
         <div>
           <label>Last name</label>
-          <input type="text" placeholder="Enter last name" required />
+          <input
+            type="text"
+            placeholder="Enter last name"
+            required
+            onChange={(lastName) => setLastName(lastName)}
+          />
         </div>
 
         <div>
           <label>Email</label>
-          <input type="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            onChange={(email) => setEmail(email)}
+          />
         </div>
 
         <div>
           <label>Password</label>
-          <input type={passwordType} placeholder="Create a password" required />
+          <input
+            type={passwordType}
+            placeholder="Create a password"
+            required
+            onChange={(password) => setPassword(password)}
+          />
           <span
             onClick={showPassword}
             className="show_login_pwd"
