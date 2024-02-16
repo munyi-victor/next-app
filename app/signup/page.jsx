@@ -35,7 +35,7 @@ const Signup = () => {
             type="text"
             placeholder="Enter first name"
             required
-            onChange={(firstName) => setFirstName(firstName)}
+            onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
 
@@ -45,7 +45,7 @@ const Signup = () => {
             type="text"
             placeholder="Enter last name"
             required
-            onChange={(lastName) => setLastName(lastName)}
+            onChange={(e) => setLastName(e.target.value)}
           />
         </div>
 
@@ -55,7 +55,7 @@ const Signup = () => {
             type="email"
             placeholder="Enter your email"
             required
-            onChange={(email) => setEmail(email)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
@@ -65,7 +65,7 @@ const Signup = () => {
             type={passwordType}
             placeholder="Create a password"
             required
-            onChange={(password) => setPassword(password)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <span
             onClick={showPassword}

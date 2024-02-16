@@ -10,7 +10,10 @@ const Login = () => {
     router.push("/");
   }
 
-  const [passwordType, setPasswordType] = useState("password")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [passwordType, setPasswordType] = useState("password");
   
   const showPassword = () => {
     if (passwordType === "password") {
@@ -26,20 +29,31 @@ const Login = () => {
         <h2 style={{ marginBottom: 20 }}>Log in</h2>
         <div>
           <label>Email</label>
-          <input type="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
 
         <div>
           <label>Password</label>
-          <input type={passwordType} placeholder="Create a password" required />
+          <input
+            type={passwordType}
+            placeholder="Create a password"
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <span
             onClick={showPassword}
             className="show_login_pwd"
             style={{
               right: "38vw",
-              top:"45.6vh"
+              top: "45.6vh",
             }}
-          >{passwordType === "password" ? "Show" : "Hide"}
+          >
+            {passwordType === "password" ? "Show" : "Hide"}
           </span>
         </div>
 
